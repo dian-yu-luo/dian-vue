@@ -1,7 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import repeatWord from "@/components/RepeatWord.vue";
 import repeatMain from "@/views/repeat/RepeatMain.vue";
-import mainPage from "@/views/demodir/MainPage.vue";
+
 
 const routes = [
     {
@@ -11,8 +11,11 @@ const routes = [
     },
     {
         path: "/main",
-        component: mainPage,
-        children: []
+        component: repeatMain,
+        children: [{
+            path:"repeat",
+            component:repeatWord
+        }]
 
     },
     {

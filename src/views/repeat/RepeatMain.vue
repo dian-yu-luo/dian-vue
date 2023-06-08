@@ -9,7 +9,7 @@ import HeaderView from "@/views/repeat/HeaderView.vue";
     <a-layout-sider><sidebar-view></sidebar-view></a-layout-sider>
     <a-layout>
       <a-layout-header><header-view></header-view></a-layout-header>
-      <a-layout-content></a-layout-content>
+      <a-layout-content><router-view></router-view></a-layout-content>
       <a-layout-footer>4</a-layout-footer>
     </a-layout>
   </a-layout>
