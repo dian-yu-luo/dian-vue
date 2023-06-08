@@ -16,7 +16,7 @@ const routes = [
         children: [{
             path:"repeat",
             component:repeatWord
-        }]
+        } ]
 
     },
     {
