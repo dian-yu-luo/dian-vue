@@ -1,0 +1,17 @@
+<script setup>
+
+</script>
+
+<template>
+  <div>
+    demo howmview
+  </div>
+</template>
+<script>
+export default {
+  name:"HomeView"
+}
+</script>
+<style scoped>
+
+</style>

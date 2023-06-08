@@ -1,17 +1,24 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import repeatWord from "@/components/RepeatWord.vue";
+import repeatMain from "@/views/repeat/RepeatMain.vue";
+import mainPage from "@/views/demodir/MainPage.vue";
 
 const routes = [
     {
-        path: '/',
-        name: 'home',
-        component: HomeView
+        path: "/",
+        component: repeatMain,
+        children: []
+    },
+    {
+        path: "/main",
+        component: mainPage,
+        children: []
+
     },
     {
         path: '/about',
         name: 'about',
-        component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../views/repeat/AboutView.vue')
     }, {
         path: "/repeatword",
         component: repeatWord
