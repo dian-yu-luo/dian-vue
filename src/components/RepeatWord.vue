@@ -6,8 +6,8 @@
   <br><br><br><br>
   <a-input v-model:value="value" placeholder="Basic usage"/>
   <br><br><br><br><br><br><br><br><br>
-  <a-button @click="logarea">ke</a-button>
-  <a-button @click="sendString">获得词组</a-button>
+  <a-button @click="func1">func1</a-button>
+  <a-button @click="func2">func2</a-button>
   <a-button>xing</a-button>
 
   <br><br>
@@ -23,24 +23,24 @@ export default {
     }
   },
   methods: {
-    sendString() {
+    func1() {
+      service.get("/1").then(res => {
+        console.log(res.data)
+        this.value = "logaaa"
+        this.value=res.data
+      })
+    },
+    func2() {
       service.post(
-          "deal", {
+            "deal", {
             data1: this.value
           }
       ).then(res => {
         console.log(res.data)
         this.value = res.data
-      }).catch(
-          this.value="button 1 can't be click"
-      )
-    },
-    logarea() {
-      service.get("/1").then(res => {
-        console.log(res.data)
-        this.value = "logaaa"
       })
-    }
+    },
+
   }
 }
 </script>
